@@ -1,0 +1,9 @@
+# Sending a messaged in /home/tcs/nv/messages  file to the hosts
+---
+ - hosts: ymlhosts
+   tasks:
+   - name: sending message of the day from /etc/motd
+     template: src=/home/tcs/nv/messages dest=/tmp/motd
+   - name: Executing wall command on all agent hosts
+     shell: cat /tmp/motd |wall
+
