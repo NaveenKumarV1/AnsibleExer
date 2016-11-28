@@ -1,6 +1,6 @@
 ---
  - hosts: ymlhosts
-   sudo: yes
+#   sudo: yes
    tasks:
    - name: executing cron jobs
      template: src=/var/Fileupdate.sh dest=/var/Fileupdate.sh mode=755
